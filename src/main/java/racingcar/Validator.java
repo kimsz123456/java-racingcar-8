@@ -34,8 +34,8 @@ public class Validator {
         }
 
         long count = Long.parseLong(input.trim());
-        if (count <= 0) {
-            throw new IllegalArgumentException("시도 횟수는 양수여야 합니다.");
+        if (count == 0) {
+            throw new IllegalArgumentException("시도 횟수는 1회 이상이어야 합니다.");
         }
         if (count > Integer.MAX_VALUE) {
             throw new IllegalArgumentException("시도 횟수가 정수 범위를 초과했습니다.");
