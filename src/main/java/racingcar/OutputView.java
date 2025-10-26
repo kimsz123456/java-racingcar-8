@@ -27,7 +27,7 @@ public class OutputView {
         System.out.println();
     }
 
-    public void printWinnerAnouncementPrompt(List<String> winners) {
+    public void printWinnerAnnouncementPrompt(List<String> winners) {
         String winnerNames = String.join(", ", winners);
         System.out.println(WINNER_ANNOUNCEMENT + winnerNames);
     }

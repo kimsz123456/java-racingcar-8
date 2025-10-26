@@ -60,7 +60,7 @@ public class CarController {
 
     private void announceWinner(List<Car> carList) {
         List<String> winners = findWinners(carList);
-        outputView.printWinnerAnouncementPrompt(winners);
+        outputView.printWinnerAnnouncementPrompt(winners);
     }
 
     private List<String> findWinners(List<Car> carList) {
