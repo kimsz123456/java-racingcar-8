@@ -16,16 +16,19 @@ public class OutputView {
         System.out.println(COUNT_PROMPT);
     }
 
-    public void printRaceResultPrompt(List<Car> carList) {
+    public void printRaceResultPrompt() {
         System.out.println(RACE_RESULT);
+    }
+
+    public void printRoundResult(List<Car> carList) {
         for (Car car : carList) {
-            car.printPosition();
+            System.out.printf("%s : %s%n", car.getName(), "-".repeat(car.getPosition()));
         }
         System.out.println();
     }
 
     public void printWinnerAnouncementPrompt(List<String> winners) {
         String winnerNames = String.join(", ", winners);
-        System.out.printf((WINNER_ANNOUNCEMENT) + "%n", winnerNames);
+        System.out.println(WINNER_ANNOUNCEMENT + winnerNames);
     }
 }
